@@ -72,6 +72,6 @@ html {
 }
 
 .margined {
-  margin-left: 50.213123123px; /* exact */
+  margin-left:  10px; /* exact */
 }
 </style>
