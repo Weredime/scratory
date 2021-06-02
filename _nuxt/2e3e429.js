@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{215:function(e,t,n){"use strict";n.r(t);var l=n(36),component=Object(l.a)({},(function(){var e=this,t=e.$createElement;return(e._self._c||t)("a",{attrs:{href:"https://jeffalo.net"}},[e._v("Jeffalo")])}),[],!1,null,null,null);t.default=component.exports}}]);
