@@ -4,35 +4,40 @@
     <br />
     <hr />
     <br />
-    <p>Credit to <a href="https://jeffalo.net">Jeffalo</a> for inspiration and data.</p>
+    <p>
+      Credit to <a href="https://jeffalo.net">Jeffalo</a> for inspiration and
+      data.
+    </p>
     <br />
-    <button class="link" @click="switchTheme()" href="#">switch theme (current: {{ $colorMode.preference }})</button>
+    <button class="link" @click="switchTheme()" href="#">
+      switch theme (current: {{ $colorMode.preference }})
+    </button>
     <br />
     <br />
     <br />
   </footer>
 </template>
 <script>
-  export default {
-    methods: {
-      switchTheme() {
-        let currentTheme = this.$colorMode.preference;
-        let themes = ['system', 'light', 'dark']
-        let to = themes[themes.indexOf(currentTheme) + 1]
-        this.$colorMode.preference = to || 'system'
-      }
-    }
-  }
+export default {
+  methods: {
+    switchTheme() {
+      let currentTheme = this.$colorMode.preference;
+      let themes = ["system", "light", "dark"];
+      let to = themes[themes.indexOf(currentTheme) + 1];
+      this.$colorMode.preference = to || "system";
+    },
+  },
+};
 </script>
 <style scoped>
-  button.link {
-    border: 1px black;
-    padding: 5px;
-    background: none;
-    cursor: pointer;
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+button.link {
+  border: 1px black;
+  padding: 5px;
+  background: none;
+  cursor: pointer;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: bold;
-    color: var(--text);
-  }
+  font-weight: bold;
+  color: var(--text);
+}
 </style>
