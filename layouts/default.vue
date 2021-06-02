@@ -63,6 +63,6 @@ html {
 }
 
 .margined {
-  margin-left:  10px; /* exact */
+  margin-left: 10px; /* exact */
 }
 </style>
