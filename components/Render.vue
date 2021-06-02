@@ -1,12 +1,11 @@
 <template>
-  <div class="content" v-html="blockifiedContent">
-  </div>
+  <div class="content" v-html="blockifiedContent"></div>
 </template>
 
 <script>
-  /* again, credit to jeffalo */
+/* again, credit to jeffalo */
 export default {
-  props: ['content'],
+  props: ["content"],
   computed: {
     blockifiedContent() {
       // adapted from https://github.com/scratchblocks/scratchblocks/blob/master/index.js
@@ -41,7 +40,7 @@ export default {
 </script>
 
 <style scoped>
-  /* again, credit to jeffalo */
+/* again, credit to jeffalo */
 .content >>> img {
   max-width: 100%;
   max-height: 100%;
@@ -90,7 +89,6 @@ export default {
   text-decoration: underline;
 }
 </style>
-
 
 <style scoped>
 /* code highlighting i am so sorry */
