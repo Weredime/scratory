@@ -39,14 +39,16 @@ export default {
     };
   },
   async fetch() {
-    let fet = await fetch(`https://scratchdb.lefty.one/v3/user/info/${this.user}`)
+    let fet = await fetch(
+      `https://scratchdb.lefty.one/v3/user/info/${this.user}`
+    );
 
-    let json = await fet.json()
+    let json = await fet.json();
 
-    this.userid = json.id
-    this.username = json.username
+    this.userid = json.id;
+    this.username = json.username;
   },
-  fetchOnServer: false
+  fetchOnServer: false,
 };
 </script>
 
