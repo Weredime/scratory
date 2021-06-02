@@ -2,7 +2,7 @@
   <div class="container">
     <Header />
     <div class="margined">
-      <h1> {{ user }}'s signature history</h1>
+      <h1>{{ user }}'s signature history</h1>
       <hr />
       <br />
       <br />
@@ -16,34 +16,35 @@
   </div>
 </template>
 <script>
-  export default {
-    head() {
-      return {
-        title: `${this.user}'s signature history`
-      }
+export default {
+  head() {
+    return {
+      title: `${this.user}'s signature history`,
+    };
+  },
+  data() {
+    return {
+      user: this.$route.params.user,
+      history: [],
+      loading: true,
+      at: 0,
+      time: "",
+    };
+  },
+  computed: {
+    currentSignature: function () {
+      return this.history[this.at];
     },
-    data() {
-      return {
-        user: this.$route.params.user,
-        history: [],
-        loading: true,
-        at: 0,
-        time: ""
-      }
-    },
-    computed: {
-      currentSignature: function() {
-        return this.history[this.at]
-      }
-    },
-    async fetch() {
-      let res = await fetch(`https://scratchdb.lefty.one/v3/forum/user/history/${this.user}`)
+  },
+  async fetch() {
+    let res = await fetch(
+      `https://scratchdb.lefty.one/v3/forum/user/history/${this.user}`
+    );
 
-      let json = await res.json();
+    let json = await res.json();
 
-      this.loading = false
-    },
-    fetchOnServer: false
-  }
+    this.loading = false;
+  },
+  fetchOnServer: false,
+};
 </script>
-

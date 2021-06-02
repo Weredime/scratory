@@ -9,13 +9,20 @@
         <div class="content">
           {{ signature }}
         </div>
-        <div class="footer">
-        </div>
+        <div class="footer"></div>
       </section>
       <nav class="left-nav">
-        <a :href="`https://scratch.mit.edu/users/${username}`" class="username">{{ username }}</a>
+        <a
+          :href="`https://scratch.mit.edu/users/${username}`"
+          class="username"
+          >{{ username }}</a
+        >
         <br />
-        <a :href="`https://scratch.mit.edu/users/${username}`"><img :src="`https://cdn2.scratch.mit.edu/get_image/user/${userid}_90x90.png`" class="pfp" /></a>
+        <a :href="`https://scratch.mit.edu/users/${username}`"
+          ><img
+            :src="`https://cdn2.scratch.mit.edu/get_image/user/${userid}_90x90.png`"
+            class="pfp"
+        /></a>
         <OcularStatus :user="user" />
       </nav>
     </div>
@@ -28,7 +35,7 @@ export default {
     return {
       userid: 0,
       username: "",
-      time: ""
+      time: "",
     };
   },
 };
