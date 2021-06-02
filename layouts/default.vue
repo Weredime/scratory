@@ -26,7 +26,6 @@ html {
   --brand: #0bc55aff;
 }
 
-
 *,
 *::before,
 *::after {
