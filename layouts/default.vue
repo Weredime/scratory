@@ -65,4 +65,8 @@ html {
 .margined {
   margin-left: 10px; /* exact */
 }
+
+body {
+  background-color: var(--background);
+}
 </style>
