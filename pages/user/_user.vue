@@ -7,8 +7,13 @@
       <br />
       <br />
       <div class="main" v-if="!loading">
-        <input type="range" v-model="at" :max="history.length" @input="changed()" />
-        <User :user="user" :signature="currentSignature" :time="time"  />
+        <input
+          type="range"
+          v-model="at"
+          :max="history.length"
+          @input="changed()"
+        />
+        <User :user="user" :signature="currentSignature" :time="time" />
       </div>
       <spinner v-if="loading" />
     </div>
@@ -29,7 +34,7 @@ export default {
       loading: true,
       at: 0,
       time: "",
-      currentSignature: ""
+      currentSignature: "",
     };
   },
   methods: {
@@ -45,7 +50,7 @@ export default {
     let json = await res.json();
 
     this.loading = false;
-    
+
     this.history = json;
   },
   fetchOnServer: false,
