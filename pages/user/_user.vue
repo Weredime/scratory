@@ -39,8 +39,8 @@ export default {
   },
   methods: {
     changed: function () {
-      this.currentSignature = this.history[this.at].previous_value
-      this.time = (new Date(this.history[this.at].time_found)).toLocaleString();
+      this.currentSignature = this.history[this.at].previous_value;
+      this.time = new Date(this.history[this.at].time_found).toLocaleString();
     },
   },
   async fetch() {
