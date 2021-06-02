@@ -26,6 +26,7 @@ html {
   --brand: #0bc55aff;
 }
 
+
 *,
 *::before,
 *::after {
@@ -68,5 +69,6 @@ html {
 
 body {
   background-color: var(--background);
+  color: var(--text-color);
 }
 </style>
