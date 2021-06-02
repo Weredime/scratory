@@ -33,7 +33,7 @@
     },
     computed: {
       currentSignature: function() {
-        return this.history[at]
+        return this.history[this.at]
       }
     },
     async fetch() {
