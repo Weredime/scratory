@@ -2,6 +2,10 @@
   <footer class="margined">
     <br />
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <hr />
     <br />
     <p>

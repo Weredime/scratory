@@ -19,6 +19,9 @@ export default {
         content: "scratch signature history",
       },
     ],
+    script: [
+      { src: "/scratory/scratchblocks.js" }
+    ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 

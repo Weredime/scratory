@@ -7,7 +7,7 @@
     <div class="wrap">
       <section class="main-content">
         <div class="content">
-          {{ signature }}
+          <Render :content="signature" />
         </div>
         <div class="footer"></div>
       </section>
