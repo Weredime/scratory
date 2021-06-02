@@ -44,6 +44,7 @@ export default {
 <style scoped>
 .container {
   margin-bottom: 20px;
+  max-width: 400px;
 }
 .wrap {
   display: flex;
