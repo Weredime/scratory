@@ -35,9 +35,18 @@ export default {
     return {
       userid: 0,
       username: "",
-      time: "",
+      time: "<placeholder>",
     };
   },
+  async fetch() {
+    let fet = await fetch(`https://scratchdb.lefty.one/v3/user/info/${this.user}`)
+
+    let json = await fet.json()
+
+    this.userid = json.id
+    this.username = json.username
+  },
+  fetchOnServer: false
 };
 </script>
 
