@@ -34,8 +34,7 @@ export default {
   data() {
     return {
       userid: 0,
-      username: "",
-      time: "<placeholder>",
+      username: ""
     };
   },
   async fetch() {
