@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 .content {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 /* again, credit to jeffalo */
 .content >>> img {
