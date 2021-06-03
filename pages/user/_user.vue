@@ -2,15 +2,13 @@
   <div class="container">
     <Header />
     <div class="margined">
-      <h1>{{ user }}'s signature history</h1>
-      <hr />
       <br />
       <br />
       <div class="main" v-if="!loading">
         <input
           type="range"
           v-model="at"
-          :max="history.length"
+          :max="history.length - 1"
           @input="changed()"
         />
         <User :user="user" :signature="currentSignature" :time="time" />
