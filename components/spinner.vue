@@ -18,11 +18,11 @@ export default {};
 @keyframes spin {
   0% {
     transform: rotate(0deg);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: ease-in-out;
   }
   100% {
     transform: rotate(360deg);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: ease-in-out;
   }
 }
 </style>
