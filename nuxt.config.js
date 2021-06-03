@@ -20,7 +20,7 @@ export default {
       },
     ],
     script: [{ src: "/scratory/scratchblocks.js" }],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", href: "/favicon.ico", id: "favicon" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
