@@ -1,11 +1,12 @@
-<template>
-</template>
+<template></template>
 <script>
 export default {
-  head() {return {title: "Redirecting.."}},
-  async fetch() {
-    window.location.href = "/user/9gr"
+  head() {
+    return { title: "Redirecting.." };
   },
-  fetchOnServer: false
-}
+  async fetch() {
+    window.location.href = "/user/9gr";
+  },
+  fetchOnServer: false,
+};
 </script>
