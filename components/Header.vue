@@ -9,9 +9,7 @@
       </NuxtLink>
     </div>
     <div class="nav-item">
-      <NuxtLink to="/user/9gr">
-        Signature History
-      </NuxtLink>
+      <NuxtLink to="/user/9gr"> Signature History </NuxtLink>
     </div>
   </div>
 </template>
@@ -32,7 +30,9 @@ export default {};
   padding: 10px 2.5px 2.5px 5px;
 }
 
-.left {float: left;}
+.left {
+  float: left;
+}
 
 .nav {
   background-color: var(--brand);
