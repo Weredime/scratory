@@ -63,7 +63,7 @@ html {
 }
 
 .margined {
-  margin-left: 10px; /* exact */
+  margin: 10px; /* exact */
 }
 
 body {
