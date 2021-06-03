@@ -14,6 +14,7 @@
     "node-fetch": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^2.0.9"
+    "@nuxtjs/color-mode": "^2.0.9",
+    "@nuxtjs/redirect-module": "latest"
   }
 }
