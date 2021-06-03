@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       userid: 0,
-      username: ""
+      username: "",
     };
   },
   async fetch() {
