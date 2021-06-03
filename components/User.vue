@@ -46,6 +46,8 @@ export default {
 
     this.userid = json.id;
     this.username = json.username;
+    
+    document.getElementById("favicon").href = `https://cdn2.scratch.mit.edu/get_image/user/${json.id}_500x500.png`
   },
   fetchOnServer: false,
 };
