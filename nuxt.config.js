@@ -42,7 +42,7 @@ export default {
   build: {},
 
   router: {
-    base: "/scratory/",
+    base: ((process.env.VERCEL == "y") ? "/" : "/scratory/"),
   },
 
   colorMode: {
