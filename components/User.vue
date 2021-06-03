@@ -75,6 +75,9 @@ export default {
 .content {
   display: block;
   width: 100%;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .left-nav {
   order: 1;
