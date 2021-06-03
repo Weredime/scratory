@@ -10,7 +10,10 @@
           <Render :content="signature" />
         </div>
         <div class="footer">
-          <a :href="`https://ocular.jeffalo.net/user/${username}`">ocular</a> | <a :href="`https://postpercent.rirurin.com/users/${username}`">postpercent</a>
+          <a :href="`https://ocular.jeffalo.net/user/${username}`">ocular</a> |
+          <a :href="`https://postpercent.rirurin.com/users/${username}`"
+            >postpercent</a
+          >
         </div>
       </section>
       <nav class="left-nav">
