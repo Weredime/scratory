@@ -17,10 +17,14 @@
 export default {};
 </script>
 <style>
+.left {
+  float: left;
+}
+
 .nav .nav-item {
   background-color: var(--brand);
   list-style-type: none;
-  height: 32px;
+  height: 40px;
   color: white;
   display: block;
   text-align: center;
@@ -28,10 +32,6 @@ export default {};
   text-size: 55px;
   float: right;
   padding: 10px 2.5px 2.5px 5px;
-}
-
-.left {
-  float: left;
 }
 
 .nav {
