@@ -10,7 +10,7 @@ module.exports = (req, res) => {
     hostname: "u.cubeupload.com",
     port: 443,
     path: req.query.path,
-    method: "GET"
+    method: "GET",
   };
 
   let resp = https.request(options, (serverRes) => {
