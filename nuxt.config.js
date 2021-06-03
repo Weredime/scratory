@@ -19,7 +19,14 @@ export default {
         content: "scratch signature history",
       },
     ],
-    script: [{ src: ((process.env.VERCEL == "y") ? "/scratchblocks.js" : "/scratory/scratchblocks.js") }],
+    script: [
+      {
+        src:
+          process.env.VERCEL == "y"
+            ? "/scratchblocks.js"
+            : "/scratory/scratchblocks.js",
+      },
+    ],
     link: [{ rel: "icon", href: "/favicon.ico", id: "favicon" }],
   },
 
