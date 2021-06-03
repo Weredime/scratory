@@ -45,6 +45,9 @@ export default {
   max-width: 100%;
   max-height: 100%;
 }
+.content >>> a {
+  text-decoration: none;
+}
 .content >>> blockquote {
   margin: 12px 0;
   padding: 12px 20px;
