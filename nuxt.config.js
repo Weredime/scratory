@@ -43,9 +43,7 @@ export default {
   buildModules: ["@nuxtjs/color-mode"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/redirect-module'
-  ],
+  modules: ["@nuxtjs/redirect-module"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -73,10 +71,10 @@ export default {
     color: "blue",
     height: "5px",
   },
-  
+
   redirect: [
-    { from: '^/youtube/(.*)$', to: 'https://youtube.com/watch?v=$1' },
-    { from: '^/discuss/(.*)$', to: '/$1' },
-    { from: '^/', to: '/user/9gr' }
+    { from: "^/youtube/(.*)$", to: "https://youtube.com/watch?v=$1" },
+    { from: "^/discuss/(.*)$", to: "/$1" },
+    { from: "^/", to: "/user/9gr" },
   ],
 };
