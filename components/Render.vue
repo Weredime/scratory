@@ -40,6 +40,9 @@ export default {
 </script>
 
 <style scoped>
+.content {
+  font-family: 'Arial', sans-serif;
+}
 /* again, credit to jeffalo */
 .content >>> img {
   max-width: 100%;
