@@ -17,7 +17,7 @@
           <a :href="`https://postpercent.rirurin.com/users/${username}`"
             >postpercent</a
           >
-          | <a @onclick="switchType()" href="#">View source</a>
+          | <a @onclick="switchType()">View source</a>
         </div>
       </section>
       <nav class="left-nav">
@@ -321,4 +321,6 @@ export default {
 .date {
   color: white;
 }
+
+a {cursor: pointer;}
 </style>
