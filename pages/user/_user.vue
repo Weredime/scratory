@@ -42,7 +42,7 @@ export default {
       window.history.replaceState(
         undefined,
         undefined,
-        `https://${location.protocol}//${window.location.hostname}/${window.location.pathname}#${this.at}`
+        `${window.location.pathname}#${this.at}`
       ); // make it full so it actually works
     },
   },
@@ -65,7 +65,7 @@ export default {
     window.history.replaceState(
       undefined,
       undefined,
-      `https://${location.protocol}//${window.location.hostname}/${window.location.pathname}#${this.at}`
+      `${window.location.pathname}#${this.at}`
     ); // make it full so it actually works
   },
   fetchOnServer: false,
