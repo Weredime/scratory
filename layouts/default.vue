@@ -70,4 +70,10 @@ body {
   background-color: var(--background);
   color: var(--text-color);
 }
+
+NuxtLink, a {
+  color: #456789;
+  font-weight: bold;
+  text-decoration: none;
+}
 </style>
