@@ -9,7 +9,7 @@
         <div class="content" v-if="currentType == 'html'">
           <Render :content="signature" />
         </div>
-        <div class="content" v-if="currentType == 'bb'">
+        <div class="content bb" v-if="currentType == 'bb'">
           {{ signatureBBCode }}
         </div>
         <div class="footer">
