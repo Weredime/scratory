@@ -10,7 +10,13 @@
     <br />
     <p>
       Credit to <a href="https://jeffalo.net">Jeffalo</a> for inspiration and
-      data.<br /> Credit to <a href="https://scratch.mit.edu/users/Pufferfish_Test">Pufferfish_Test</a> and <a href="https://scratch.mit.edu/users/TheColaber">TheColaber</a> for the <code>View Source</code> Functionality.
+      data.<br />
+      Credit to
+      <a href="https://scratch.mit.edu/users/Pufferfish_Test"
+        >Pufferfish_Test</a
+      >
+      and <a href="https://scratch.mit.edu/users/TheColaber">TheColaber</a> for
+      the <code>View Source</code> Functionality.
     </p>
     <br />
     <button class="link" @click="switchTheme()" href="#">
