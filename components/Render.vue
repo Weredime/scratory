@@ -46,7 +46,7 @@ export default {
 /* again, credit to jeffalo */
 .content >>> img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 150px;
 }
 .content >>> a {
   text-decoration: none;
