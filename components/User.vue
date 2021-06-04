@@ -70,7 +70,7 @@ export default {
   computed: {
     signatureBBCode() {
       var html = document.createElement("div");
-      html.appendChild(this.signature);
+      html.innerHTML = this.signature;
       // new lines
       let lineBreaks = html.querySelectorAll("br");
       for (let br of lineBreaks) br.insertAdjacentText("afterend", "\n");
