@@ -17,8 +17,12 @@
 export default {};
 </script>
 <style>
-.left {float: left;}
-.nav .nav-item:not(.left) {float: right;}
+.left {
+  float: left;
+}
+.nav .nav-item:not(.left) {
+  float: right;
+}
 .nav .nav-item {
   background-color: var(--brand);
   list-style-type: none;
@@ -31,7 +35,9 @@ export default {};
   padding: 10px 2.5px 2.5px 5px;
 }
 
-.nav-item >>> span {padding: 10px 2.5px 2.5px 5px;}
+.nav-item >>> span {
+  padding: 10px 2.5px 2.5px 5px;
+}
 
 .nav {
   background-color: var(--brand);
