@@ -322,5 +322,7 @@ export default {
   color: white;
 }
 
-a {cursor: pointer;}
+a {
+  cursor: pointer;
+}
 </style>
