@@ -39,7 +39,7 @@ export default {
     changed: function () {
       this.currentSignature = this.history[this.at].previous_value;
       this.time = new Date(this.history[this.at].time_found).toLocaleString();
-      // window.history.replaceState(undefined, undefined, `#${this.at}`);
+      window.history.replaceState(undefined, undefined, `https://${location.protocol}//${window.location.hostname}/${window.location.pathname}#${this.at}`); // make it full so it actually works
     },
   },
   async fetch() {
@@ -58,7 +58,7 @@ export default {
     this.at = num !== "NaN" && num ? num : 0;
     this.currentSignature = this.history[this.at].previous_value;
     this.time = new Date(this.history[this.at].time_found).toLocaleString();
-    // window.history.replaceState(undefined, undefined, `#${this.at}`);
+    window.history.replaceState(undefined, undefined, `https://${location.protocol}//${window.location.hostname}/${window.location.pathname}#${this.at}`); // make it full so it actually works 
   },
   fetchOnServer: false,
 };
