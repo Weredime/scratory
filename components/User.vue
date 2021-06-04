@@ -17,7 +17,7 @@
           <a :href="`https://postpercent.rirurin.com/users/${username}`"
             >postpercent</a
           >
-          | <a @onclick="switchType()">View source</a>
+          | <button class="link" @click="switchType()">View source</button>
         </div>
       </section>
       <nav class="left-nav">
@@ -324,5 +324,17 @@ export default {
 
 a {
   cursor: pointer;
+}
+
+
+button.link {
+  border: 1px black;
+  padding: 5px;
+  background: none;
+  cursor: pointer;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  color: var(--text);
 }
 </style>
