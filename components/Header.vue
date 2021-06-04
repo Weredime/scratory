@@ -3,13 +3,13 @@
     <div class="nav-item left">
       <NuxtLink to="/">
         <div class="brand">
-          Scratory
-          <span class="beta"> BETA </span>
+          <span>Scratory</span>
+          <span class="beta">BETA</span>
         </div>
       </NuxtLink>
     </div>
     <div class="nav-item">
-      <NuxtLink to="/user/9gr"> Signature History </NuxtLink>
+      <NuxtLink to="/user/9gr"><span>Signature History</span></NuxtLink>
     </div>
   </div>
 </template>
@@ -17,10 +17,8 @@
 export default {};
 </script>
 <style>
-.left {
-  float: left;
-}
-
+.left {float: left;}
+.nav .nav-item:not(.left) {float: right;}
 .nav .nav-item {
   background-color: var(--brand);
   list-style-type: none;
@@ -30,9 +28,10 @@ export default {};
   text-align: center;
   text-decoration: none;
   text-size: 55px;
-  float: right;
   padding: 10px 2.5px 2.5px 5px;
 }
+
+.nav-item >>> span {padding: 10px 2.5px 2.5px 5px;}
 
 .nav {
   background-color: var(--brand);
@@ -50,6 +49,10 @@ export default {};
   text-weight: bold;
 }
 .beta {
-  font-size: 5px;
+  font-size: 10px;
+}
+
+.brand {
+  font-size: 17px;
 }
 </style>
