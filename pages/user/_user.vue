@@ -52,10 +52,10 @@ export default {
     this.loading = false;
 
     this.history = json;
-    
-    let num = Number(window.location.hash.substring(1))
-    
-    this.at = ((num !== "NaN") && num) ? num : 0
+
+    let num = Number(window.location.hash.substring(1));
+
+    this.at = num !== "NaN" && num ? num : 0;
     this.currentSignature = this.history[this.at].previous_value;
     this.time = new Date(this.history[this.at].time_found).toLocaleString();
     // window.history.replaceState(undefined, undefined, `#${this.at}`);
