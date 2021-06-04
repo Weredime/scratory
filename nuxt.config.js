@@ -17,7 +17,7 @@ export default {
         hid: "description",
         name: "description",
         content: "scratch signature history",
-      },
+      }
     ],
     script: [
       {
@@ -27,7 +27,7 @@ export default {
             : "/scratory/scratchblocks.js",
       },
     ],
-    link: [{ rel: "icon", href: "/favicon.ico", id: "favicon" }],
+    link: [{ rel: "icon", href: "/favicon.svg", id: "favicon" }, { rel: "shortcut icon", href: "/favicon.svg" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
