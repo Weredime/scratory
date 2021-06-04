@@ -326,7 +326,6 @@ a {
   cursor: pointer;
 }
 
-
 button.link {
   border: 1px black;
   padding: 5px;
