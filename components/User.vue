@@ -17,7 +17,7 @@
           <a :href="`https://postpercent.rirurin.com/users/${username}`"
             >postpercent</a
           >
-          | <a @onclick="switch()" href="#">View source</a>
+          | <a @onclick="switchType()" href="#">View source</a>
         </div>
       </section>
       <nav class="left-nav">
@@ -63,7 +63,7 @@ export default {
   },
   fetchOnServer: false,
   methods: {
-    switch() {
+    switchType() {
       this.currentType = this.currentType == "html" ? "bb" : "html";
     },
   },
