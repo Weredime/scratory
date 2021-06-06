@@ -5,7 +5,7 @@ export default {
     return { title: "Redirecting.." };
   },
   async fetch() {
-    window.location.href = "/user/9gr";
+    this.$router.push({ path: "/user/9gr" })
   },
   fetchOnServer: false,
 };
