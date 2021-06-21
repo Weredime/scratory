@@ -19,9 +19,9 @@
       the <code>View Source</code> Functionality.
     </p>
     <br />
-    <button class="link" @click="switchTheme()" href="#">
+    <a class="link" @click="switchTheme()" href="#">
       switch theme (current: {{ $colorMode.preference }})
-    </button>
+    </a>
     <br />
     <br />
     <br />
@@ -32,7 +32,7 @@ export default {
   methods: {
     switchTheme() {
       let currentTheme = this.$colorMode.preference;
-      let themes = ["system", "light", "dark"];
+      let themes = ["system", "light", "dark", "jeffalo", "catsunited"];
       let to = themes[themes.indexOf(currentTheme) + 1];
       this.$colorMode.preference = to || "system";
     },
@@ -40,14 +40,16 @@ export default {
 };
 </script>
 <style scoped>
-button.link {
-  border: 1px black;
-  padding: 5px;
+.link {
   background: none;
   cursor: pointer;
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
   color: var(--text);
+}
+
+footer.margined {
+  margin: 10px;
 }
 </style>

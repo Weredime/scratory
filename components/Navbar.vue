@@ -8,9 +8,6 @@
         </div>
       </NuxtLink>
     </div>
-    <div class="nav-item">
-      <NuxtLink to="/user/9gr"><span>Signature History</span></NuxtLink>
-    </div>
   </div>
 </template>
 <script>
@@ -20,18 +17,21 @@ export default {};
 .left {
   float: left;
 }
+
+.nav {
+  height: auto;
+}
 .nav .nav-item:not(.left) {
   float: right;
 }
 .nav .nav-item {
-  background-color: var(--brand);
+  background-color: inherit;
   list-style-type: none;
-  height: 40px;
-  color: white;
+  height: auto;
   display: block;
   text-align: center;
   text-decoration: none;
-  text-size: 55px;
+  font-size: 20px;
   padding: 10px 2.5px 2.5px 5px;
 }
 
@@ -45,20 +45,22 @@ export default {};
   list-style-type: none;
   padding: 0;
   overflow: hidden;
-  height: 32px;
+  height: auto;
   width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .nav-item NuxtLink,
 .nav-item a {
-  color: white;
+  color: var(--text);
   text-decoration: none;
-  text-weight: bold;
+  font-weight: bold;
 }
 .beta {
-  font-size: 10px;
+  font-size: 5px;
 }
 
 .brand {
-  font-size: 17px;
+  font-size: 20px;
 }
 </style>

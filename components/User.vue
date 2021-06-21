@@ -17,7 +17,7 @@
           <a :href="`https://postpercent.rirurin.com/users/${username}`"
             >postpercent</a
           >
-          | <button class="link" @click="switchType()">View source</button>
+          | <a class="link" @click="switchType()">View {{ type }}</a>
         </div>
       </section>
       <nav class="left-nav">
@@ -45,6 +45,7 @@ export default {
       userid: 0,
       username: "",
       currentType: "html",
+      type: "source",
     };
   },
   async fetch() {
@@ -65,6 +66,7 @@ export default {
   methods: {
     switchType() {
       this.currentType = this.currentType == "html" ? "bb" : "html";
+      this.type = this.currentType == "html" ? "source" : "HTML";
     },
   },
   computed: {
@@ -226,6 +228,7 @@ export default {
 <style scoped>
 .container {
   margin-bottom: 20px;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 .wrap {
   display: flex;
