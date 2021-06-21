@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 const app = express();
 
-app.get("/user/:user", async (req, res) => {
+app.get("/api/user/:user", async (req, res) => {
   let resp = await fetch(
     `https://api.scratch.mit.edu/users/${req.params.user}`
   );
@@ -11,11 +11,11 @@ app.get("/user/:user", async (req, res) => {
 
   res.json({
     id,
-    username,
+    username
   });
 });
 
-app.get("/user/:user/picture", async (req, res) => {
+app.get("/api/user/:user/picture", async (req, res) => {
   let resp = await fetch(
     `https://api.scratch.mit.edu/users/${req.params.user}`
   );

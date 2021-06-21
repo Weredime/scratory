@@ -6,7 +6,7 @@ export default {
       return chunk ? `${chunk} - Scratory` : "Scratory";
     },
     htmlAttrs: {
-      lang: "en",
+      lang: "en"
     },
     meta: [
       { charset: "utf-8" },
@@ -14,21 +14,21 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "scratch signature history",
-      },
+        content: "scratch signature history"
+      }
     ],
     script: [
       {
         src:
           process.env.GITHUB !== "y"
             ? "/scratchblocks.js"
-            : "/scratory/scratchblocks.js",
-      },
+            : "/scratory/scratchblocks.js"
+      }
     ],
     link: [
       { rel: "icon", href: "/favicon.svg", id: "favicon" },
-      { rel: "shortcut icon", href: "/favicon.svg" },
-    ],
+      { rel: "shortcut icon", href: "/favicon.svg" }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -50,7 +50,7 @@ export default {
   build: {},
 
   router: {
-    base: process.env.GITHUB !== "y" ? "/" : "/scratory/",
+    base: process.env.GITHUB !== "y" ? "/" : "/scratory/"
   },
 
   colorMode: {
@@ -61,23 +61,21 @@ export default {
     componentName: "ColorScheme",
     classPrefix: "",
     classSuffix: "-mode",
-    storageKey: "nuxt-color-mode",
+    storageKey: "nuxt-color-mode"
   },
 
   generate: {
-    fallback: "404.html",
+    fallback: "404.html"
   },
 
   loading: {
     color: "blue",
-    height: "5px",
+    height: "5px"
   },
 
   redirect: [
     { from: "^/youtube/(.*)$", to: "https://youtube.com/watch?v=$1" },
-    { from: "^/discuss/(.*)$", to: "/$1" },
+    { from: "^/discuss/(.*)$", to: "/$1" }
   ],
-  serverMiddleware: [
-    { path: "/api", handler: "~/server-middleware/server.js" },
-  ],
+  serverMiddleware: ["~/server-middleware/server.js"]
 };
