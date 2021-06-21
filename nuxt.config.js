@@ -71,5 +71,5 @@ export default {
   redirect: [
     { from: "^/youtube/(.*)$", to: "https://youtube.com/watch?v=$1" },
     { from: "^/discuss/(.*)$", to: "/$1" },
-  ]
+  ],
 };
