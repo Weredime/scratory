@@ -47,15 +47,15 @@ export default {
 </script>
 <style scoped>
 div[type="ScratchStats-btn"] {
-  background-color: #25AFF4;
+  background-color: #25aff4;
 }
 
 div[type="ocular-btn"] {
-  background-color: #0FBD8C;
+  background-color: #0fbd8c;
 }
 
 div[type="postpercent-btn"] {
-  background-color: #F54260;
+  background-color: #f54260;
 }
 
 div[type="scratory-btn"] {
