@@ -52,7 +52,7 @@ export default {};
 }
 .nav-item NuxtLink,
 .nav-item a {
-  color: var(--text);
+  color: var(--navText);
   text-decoration: none;
   font-weight: bold;
 }
@@ -62,5 +62,9 @@ export default {};
 
 .brand {
   font-size: 20px;
+}
+
+* {
+  color: var(--navText);
 }
 </style>

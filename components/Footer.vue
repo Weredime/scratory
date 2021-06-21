@@ -32,7 +32,14 @@ export default {
   methods: {
     switchTheme() {
       let currentTheme = this.$colorMode.preference;
-      let themes = ["system", "light", "dark", "jeffalo", "catsunited"];
+      let themes = [
+        "system",
+        "light",
+        "dark",
+        "jeffalo",
+        "catsunited",
+        "potatophant",
+      ];
       let to = themes[themes.indexOf(currentTheme) + 1];
       this.$colorMode.preference = to || "system";
     },

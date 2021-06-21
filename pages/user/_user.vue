@@ -1,21 +1,17 @@
 <template>
-  <div class="container">
-    <Header />
-    <div class="margined">
-      <br />
-      <br />
-      <div class="main" v-if="!loading">
-        <input
-          type="range"
-          v-model="at"
-          :max="history.length - 1"
-          @input="changed()"
-        />
-        <User :user="user" :signature="currentSignature" :time="time" />
-      </div>
-      <spinner v-if="loading" />
+  <div class="margined">
+    <div class="main" v-if="!loading">
+      <input
+        type="range"
+        class="input"
+        v-model="at"
+        :max="history.length - 1"
+        @input="changed()"
+        :style="`width:${this.width}%;`"
+      />
+      <User :user="user" :signature="currentSignature" :time="time" />
     </div>
-    <Footer />
+    <spinner v-if="loading" />
   </div>
 </template>
 <script>
@@ -33,17 +29,19 @@ export default {
       at: 0,
       time: "",
       currentSignature: "",
+      width: 0,
     };
   },
   methods: {
     changed: function () {
       this.currentSignature = this.history[this.at].previous_value;
       this.time = new Date(this.history[this.at].time_found).toLocaleString();
-      window.history.replaceState(
+      /*window.history.replaceState(
         undefined,
         undefined,
-        `${window.location.pathname}#${this.at}`
-      ); // make it full so it actually works
+        `${window.location.pathname}`
+      ); // make it full so it actually works */
+      this.$router.push({ path: `#${this.at}` });
     },
   },
   async fetch() {
@@ -67,13 +65,15 @@ export default {
       undefined,
       `${window.location.pathname}#${this.at}`
     ); // make it full so it actually works
+
+    setTimeout(() => (this.width = 100), 100);
   },
   fetchOnServer: false,
 };
 </script>
 <style>
-input {
-  width: 70%;
+.input {
   text-align: center;
+  transition: width ease 1s;
 }
 </style>
