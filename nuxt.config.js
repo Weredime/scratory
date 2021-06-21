@@ -50,11 +50,7 @@ export default {
   build: {},
 
   router: {
-    base: process.env.GITHUB !== "y" ? "/" : "/scratory/",
-  },
-
   colorMode: {
-    preference: "system",
     fallback: "light",
     hid: "nuxt-color-mode-script",
     globalName: "__NUXT_COLOR_MODE__",
@@ -77,5 +73,4 @@ export default {
     { from: "^/youtube/(.*)$", to: "https://youtube.com/watch?v=$1" },
     { from: "^/discuss/(.*)$", to: "/$1" },
   ],
-  serverMiddleware: ["~/server-middleware/server.js"],
 };
