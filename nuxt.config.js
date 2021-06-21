@@ -49,7 +49,6 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  router: {
   colorMode: {
     fallback: "light",
     hid: "nuxt-color-mode-script",
@@ -72,5 +71,5 @@ export default {
   redirect: [
     { from: "^/youtube/(.*)$", to: "https://youtube.com/watch?v=$1" },
     { from: "^/discuss/(.*)$", to: "/$1" },
-  ],
+  ]
 };
