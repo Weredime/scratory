@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/spinner", {data:[{}],fetch:{},mutations:void 0});
