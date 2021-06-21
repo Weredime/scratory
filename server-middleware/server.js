@@ -11,7 +11,7 @@ app.get("/api/user/:user", async (req, res) => {
 
   res.json({
     id,
-    username
+    username,
   });
 });
 
