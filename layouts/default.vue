@@ -23,11 +23,11 @@
 }
 
 .jeffalo-mode {
-  --brand: #0fbd8c;
-  --text: #bda3b3;
-  --navText: #bda3b3;
-  --link-color: #ffffff;
-  --background: #ffffff;
+  --brand: #0FBD8C;
+  --text: #BDA3B3;
+  --navText: #BDA3B3;
+  --link-color: #FFFFFF;
+  --background: #FFFFFF;
   --font: "Helvetica Neue", Helvetica;
 }
 
