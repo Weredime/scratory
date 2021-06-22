@@ -8,7 +8,7 @@
           :src="
             this.id
               ? `https://cdn2.scratch.mit.edu/get_image/user/${id}_100x100.png`
-              : `/api/user/${this.username}/picture`
+              : `https://my-ocular.jeffalo.net/api/user/${this.username}/picture`
           "
         />
       </a>
@@ -66,7 +66,9 @@ export default {
         this.id = null;
       } else {
         this.cached = false;
-        let res = await fetch(`/api/user/${this.username}`).catch((err) => ({
+        let res = await fetch(
+          `https://scratchdb.lefty.one/v3/user/info/${this.username}`
+        ).catch((err) => ({
           scratoryError: true,
         }));
 

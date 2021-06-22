@@ -47,15 +47,15 @@ export default {
 </script>
 <style scoped>
 div[type="ScratchStats-btn"] {
-  background-color: #25aff4;
+  background-color: #25AFF4;
 }
 
 div[type="ocular-btn"] {
-  background-color: #0fbd8c;
+  background-color: #0FBD8C;
 }
 
 div[type="postpercent-btn"] {
-  background-color: #f54260;
+  background-color: #F54260;
 }
 
 div[type="scratory-btn"] {
@@ -76,15 +76,13 @@ div.btn {
   cursor: pointer;
   display: flex;
   border-radius: 24px;
-  width: 310px;
-  height: 60px;
+  width: 300px;
+  height: 50px;
   text-transform: uppercase;
   font-weight: 100;
   padding: 2px;
   box-styling: border-box;
-  border-style: solid;
-  border-width: 10px;
-  border-color: var(--background);
+  margin: 10px;
 }
 
 .brand img {
