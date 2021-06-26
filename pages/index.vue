@@ -58,9 +58,7 @@ export default {
   },
   methods: {
     async changed() {
-      this.$router.push({
-        path: `/#${this.username}`,
-      });
+      window.history.replaceState(null, document.title, `#${this.username}`);
       if (!this.username) return;
       if (this.username.length < 3) {
         this.id = null;

@@ -13,7 +13,7 @@
 <script>
 export default {};
 </script>
-<style>
+<style scoped>
 .left {
   float: left;
 }
@@ -25,7 +25,6 @@ export default {};
   float: right;
 }
 .nav .nav-item {
-  background-color: inherit;
   list-style-type: none;
   height: auto;
   display: block;
@@ -51,7 +50,7 @@ export default {};
   padding-bottom: 5px;
 }
 .nav-item NuxtLink,
-.nav-item a {
+.nav >>> * {
   color: var(--navText);
   text-decoration: none;
   font-weight: bold;
@@ -62,9 +61,5 @@ export default {};
 
 .brand {
   font-size: 20px;
-}
-
-* {
-  color: var(--navText);
 }
 </style>
