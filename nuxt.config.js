@@ -15,7 +15,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/svg', href: '/favicon.svg' },
+      { rel: 'shortcut icon', type: 'image/svg', href: '/favicon.svg' }
     ],
     script: [
       { src: 'https://scratchblocks.github.io/js/scratchblocks-v3.5.2-min.js'}
