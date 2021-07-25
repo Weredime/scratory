@@ -7,7 +7,7 @@
                 <div class="mb-2 shadow-md rounded-md overflow-hidden">
                     <div class="header w-full bg-blue-400 p-2">
                         <p> 
-                            {{ new Date(current.timeFound).toLocaleString() }} | <span v-if="$route.params.user.toLowerCase() == 'jeffalo'">hekcer</span> <span v-if="$route.params.user.toLowerCase() == 'gosoccerboy5'">code golfing</span><span v-if="$route.params.user.toLowerCase() == 'chiroyce'">the python guy</span> <span v-if="$route.params.user.toLowerCase() == 'kccuber'">da scratch cat &trade;</span> <span v-if="$route.params.user.toLowerCase() == '9gr'">hmmm</span>
+                            {{ new Date(current.timeFound).toLocaleString() }} | <span v-if="$route.params.user.toLowerCase() == 'potatophant'">sus</span> <span v-if="$route.params.user.toLowerCase() == 'jeffalo'">hekcer</span> <span v-if="$route.params.user.toLowerCase() == 'gosoccerboy5'">code golfing</span><span v-if="$route.params.user.toLowerCase() == 'chiroyce'">the python guy</span> <span v-if="$route.params.user.toLowerCase() == 'kccuber'">da scratch cat &trade;</span> <span v-if="$route.params.user.toLowerCase() == '9gr'">hmmm</span>
                         </p>
                     </div>
                     <div class="grid grid-cols-5">
