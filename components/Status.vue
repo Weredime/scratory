@@ -1,5 +1,5 @@
 <template>
-    <i><br />{{ status }} <span class="rounded-full w-2 h-2" :style="`background-color: ${color};`"></span></i>
+    <i class="inline-block">{{ status }} <span class="rounded-full w-2 h-2" :style="`background-color: ${color};`"></span></i>
 </template>
 <script>
 export default {

@@ -5,8 +5,10 @@
             <Spinner v-if="!user" />
             <div class="main" v-if="user">
                 <div class="mb-2 shadow-md rounded-md overflow-hidden">
-                    <div class="header w-full bg-green-400 p-2">
-                        <p> {{ new Date(current.timeFound).toLocaleString() }} </p>
+                    <div class="header w-full bg-blue-400 p-2">
+                        <p> 
+                            {{ new Date(current.timeFound).toLocaleString() }} | <span v-if="$route.params.user.toLowerCase() == 'jeffalo'">hekcer</span> <span v-if="$route.params.user.toLowerCase() == 'gosoccerboy5'">code golfing</span><span v-if="$route.params.user.toLowerCase() == 'chiroyce'">the python guy</span> <span v-if="$route.params.user.toLowerCase() == 'kccuber'">da scratch cat &trade;</span> <span v-if="$route.params.user.toLowerCase() == '9gr'">hmmm</span>
+                        </p>
                     </div>
                     <div class="grid grid-cols-5">
                         <nav class="left-nav p-4 col-span-1">
@@ -16,7 +18,7 @@
                             </a>
                             <Status v-if="user" :username="user.username" />
                         </nav>
-                        <div class="col-span-4 p-4 border-l border-green-400 w-full h-60">
+                        <div class="col-span-4 p-4 border-l border-blue-400 w-full h-60">
                             <div class="content h-44 overflow-auto">
                                 <Render :content="current.value" />
                             </div>
@@ -68,7 +70,8 @@ export default {
         next() {
             this.current = this.history[this.time]
         }
-    }
+    },
+    fetchOnServer: false
 }
 </script>
 
@@ -85,7 +88,7 @@ export default {
   }
 }
 
-a:not(.navbar a) {
+a:not(.navbar a, .nohigh) {
     @apply font-semibold text-blue-700
 }
 </style>
