@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Navbar />
         <div class="p-3 margined">
             <Spinner v-if="!user" />
             <div class="main" v-if="user">
@@ -15,7 +16,6 @@
                                 <img :src="`https://cdn2.scratch.mit.edu/get_image/user/${user.id}_90x90.png`" />
                                 {{ user.username }}
                             </a>
-                            <span class="block" v-if="forumUser">{{ forumUser.counts.total.count }} posts</span>
                             <Status v-if="user" :username="user.username" />
                         </nav>
                         <div class="col-span-4 p-4 border-l border-blue-400 w-full h-60">
@@ -46,9 +46,7 @@ export default {
             user: null,
             current: null,
             time: 0,
-            history: null,
-            forumUser: null,
-            loaded: null
+            history: null
         }
     },
     async fetch() {
@@ -65,29 +63,10 @@ export default {
         let user = await resp.json()
 
         this.user = user
-
-        let fRes = await fetch(`https://scratchdb.lefty.one/v3/forum/user/info/${this.$route.params.user}`)
-        let fUser = await fRes.json()
-
-        this.forumUser = fUser
-
-        if (process.client) {
-            let parsed = Number(window.location.hash?.substr(1))
-            this.time = this.history.length - (typeof parsed == 'number' ? parsed : this.history.length)
-            this.next()
-        }
-    },
-    async mounted() {
-        if (this.forumUser) {
-            let parsed = Number(window.location.hash?.substr(1))
-            this.time = (typeof parsed == 'number' ? parsed : 0)
-            this.next()
-        }
     },
     methods: {
         next() {
             this.current = this.history[this.time]
-            this.$router.replace(`#${this.time}`)
         }
     },
     fetchOnServer: false

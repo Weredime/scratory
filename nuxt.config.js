@@ -1,5 +1,7 @@
 export default {
+  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Scratory',
@@ -41,17 +43,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // '@nuxtjs/redirect-module'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  },
-  
-  redirect: [
-    { from: '^/discuss/(.*)', to: '/$1' },
-    { from: '^/youtube/(.*)', to: 'https://youtube.com/watch?v=$1' },
-    { from: '^/users/(.*)', to: '/user/$1' },
-    { from: '^/search', to: '/' }
-  ] 
+  }
 }

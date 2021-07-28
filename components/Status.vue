@@ -28,8 +28,4 @@ export default {
     border-radius: 50%;
     display: inline-block;
 }
-
-i {
-    max-width: 100%;
-}
 </style>

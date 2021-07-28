@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar />
     <div class="p-3">
       <center>
         <Logo v-if="!user" class="w-24" />
