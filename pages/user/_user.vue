@@ -47,7 +47,8 @@ export default {
             current: null,
             time: 0,
             history: null,
-            forumUser: null
+            forumUser: null,
+            loaded: null
         }
     },
     async fetch() {
@@ -71,6 +72,19 @@ export default {
         let fUser = await fRes.json()
 
         this.forumUser = fUser
+
+        if (process.client) {
+            let parsed = Number(window.location.hash?.substr(1))
+            this.time = this.history.length - (typeof parsed == 'number' ? parsed : 0)
+            this.next()
+        }
+    },
+    async mounted() {
+        if (this.forumUser) {
+            let parsed = Number(window.location.hash?.substr(1))
+            this.time = (typeof parsed == 'number' ? parsed : 0)
+            this.next()
+        }
     },
     methods: {
         next() {
@@ -79,6 +93,10 @@ export default {
         }
     }
 }
+// |                      |
+//   | <------ 20 ------>  // generated
+// |----------------------|
+//start                 finish
 </script>
 
 <style>

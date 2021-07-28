@@ -12,7 +12,7 @@ export default {
       // adapted from https://github.com/scratchblocks/scratchblocks/blob/master/index.js
       let content = this.content;
       let options = {
-        style: "scratch2",
+        style: this.$settings.get('scratchblocks') || 'scratch2',
         inline: false,
         languages: ["en"],
         read: scratchblocks.read, // function(el, options) => code

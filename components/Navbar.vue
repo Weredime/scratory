@@ -10,6 +10,11 @@
                 Signature History
             </NuxtLink>
         </div>
+        <div class="col ml-auto">
+            <NuxtLink to="/settings" class="ease duration-700 hover:bg-blue-500 p-3 inline-block py-2 px-5">
+                Settings
+            </NuxtLink>
+        </div>
     </div>
 </template>
 <script>
