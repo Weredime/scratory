@@ -1,5 +1,5 @@
 <template>
-    <i class="inline-block">{{ status }} <span class="rounded-full w-2 h-2" :style="`background-color: ${color};`"></span></i>
+    <i class="inline-block">{{ status }} <span class="dot" :style="`background-color: ${color};`"></span></i>
 </template>
 <script>
 export default {
@@ -19,3 +19,13 @@ export default {
     }
 }
 </script>
+<style>
+.dot {
+    height: 10px;
+    width: 10px;
+    margin-left: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+</style>
