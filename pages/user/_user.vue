@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Navbar />
         <div class="p-3 margined">
             <Spinner v-if="!user" />
             <div class="main" v-if="user">
@@ -16,6 +15,7 @@
                                 <img :src="`https://cdn2.scratch.mit.edu/get_image/user/${user.id}_90x90.png`" />
                                 {{ user.username }}
                             </a>
+                            <span class="block" v-if="forumUser">{{ forumUser.counts.total.count }} posts</span>
                             <Status v-if="user" :username="user.username" />
                         </nav>
                         <div class="col-span-4 p-4 border-l border-blue-400 w-full h-60">
@@ -46,7 +46,8 @@ export default {
             user: null,
             current: null,
             time: 0,
-            history: null
+            history: null,
+            forumUser: null
         }
     },
     async fetch() {
@@ -65,13 +66,18 @@ export default {
         let user = await resp.json()
 
         this.user = user
+
+        let fRes = await fetch(`https://scratchdb.lefty.one/v3/forum/user/info/${this.$route.params.user}`)
+        let fUser = await fRes.json()
+
+        this.forumUser = fUser
     },
     methods: {
         next() {
             this.current = this.history[this.time]
+            this.$router.replace(`#${this.time}`)
         }
-    },
-    fetchOnServer: false
+    }
 }
 </script>
 
