@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Navbar />
         <div class="p-3 margined">
             <Spinner v-if="!user" />
             <div class="main" v-if="user">
