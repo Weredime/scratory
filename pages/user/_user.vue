@@ -91,7 +91,8 @@ export default {
             this.current = this.history[this.time]
             this.$router.replace(`#${this.time}`)
         }
-    }
+    },
+    fetchOnServer: false
 }
 // |                      |
 //   | <------ 20 ------>  // generated
