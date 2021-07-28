@@ -5,7 +5,7 @@
             <div class="main" v-if="user">
                 <div class="mb-2 shadow-md rounded-md overflow-hidden">
                     <div class="header w-full bg-blue-400 p-2">
-                        <p> 
+                        <p v-if="current"> 
                             {{ new Date(current.timeFound).toLocaleString() }} | <span v-if="$route.params.user.toLowerCase() == 'potatophant'">sus</span> <span v-if="$route.params.user.toLowerCase() == 'jeffalo'">hekcer</span> <span v-if="$route.params.user.toLowerCase() == 'gosoccerboy5'">code golfing</span><span v-if="$route.params.user.toLowerCase() == 'chiroyce'">the python guy</span> <span v-if="$route.params.user.toLowerCase() == 'kccuber'">da scratch cat &trade;</span> <span v-if="$route.params.user.toLowerCase() == '9gr'">hmmm</span>
                         </p>
                     </div>
@@ -19,7 +19,7 @@
                             <Status v-if="user" :username="user.username" />
                         </nav>
                         <div class="col-span-4 p-4 border-l border-blue-400 w-full h-60">
-                            <div class="content h-44 overflow-auto">
+                            <div v-if="current" class="content h-44 overflow-auto">
                                 <Render :content="current.value" />
                             </div>
                             <footer class="h-14 text-right">
@@ -53,12 +53,10 @@ export default {
     },
     async fetch() {
         let res = await fetch(`https://scratchdb.lefty.one/v3/forum/user/history/${this.$route.params.user}`)
-        let json = (await res.json()).map(entry => {
-            return {
+        let json = (await res.json()).map(entry => ({
                 value: entry.previous_value,
                 timeFound: entry.time_found
-            }
-        })
+            }))
 
         this.history = json
         this.current = json[0]
@@ -75,7 +73,7 @@ export default {
 
         if (process.client) {
             let parsed = Number(window.location.hash?.substr(1))
-            this.time = this.history.length - (typeof parsed == 'number' ? parsed : 0)
+            this.time = this.history.length - (typeof parsed == 'number' ? parsed : this.history.length)
             this.next()
         }
     },

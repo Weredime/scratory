@@ -1,5 +1,5 @@
 <template>
-    <div class="__scratory">
+    <div class="scratory-page">
         <div ref="banner" class="banner bg-green-500 w-full p-5 text-white font-bold" v-if="isClient && !$settings.get('accepted')">
             <div class="grid grid-cols-4">
                 <div class="col col-span-3">
