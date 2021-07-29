@@ -14,7 +14,7 @@
 </template>
 <script>
 export default {
-  props: ["width", "height"],
+  props: ["width", "height"]
 };
 </script>
 <style>

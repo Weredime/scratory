@@ -8,23 +8,23 @@ export default {
   props: ["content"],
   computed: {
     blockifiedContent() {
-      if (process.server) return
+      if (process.server) return;
       // adapted from https://github.com/scratchblocks/scratchblocks/blob/master/index.js
       let content = this.content;
       let options = {
-        style: this.$settings.get('scratchblocks') || 'scratch2',
+        style: this.$settings.get("scratchblocks") || "scratch2",
         inline: false,
         languages: ["en"],
         read: scratchblocks.read, // function(el, options) => code
         parse: scratchblocks.parse, // function(code, options) => doc
-        render: scratchblocks.render, // function(doc) => svg
+        render: scratchblocks.render // function(doc) => svg
       };
       const parser = new DOMParser();
       const doc = parser.parseFromString(content, "text/html");
       let results = [].slice.apply(
         doc.querySelectorAll("pre.blocks:not(.scratchblockrendered)")
       );
-      results.forEach(function (el) {
+      results.forEach(function(el) {
         var code = options.read(el, options);
         var parsed = options.parse(code, options);
         var svg = options.render(parsed, options);
@@ -35,7 +35,7 @@ export default {
         el.appendChild(container);
       });
       return doc.documentElement.innerHTML;
-    },
+    }
   },
   ssr: false
 };
