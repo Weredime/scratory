@@ -37,7 +37,7 @@
 export default {
     head() {
         return {
-            title: `${this.user?.username || this.$route.params.user}`
+            title: this.user?.username || this.$route.params.user
         }
     },
     data() {
@@ -87,9 +87,5 @@ export default {
     margin-left: 10px;
     margin-right: 10px;
   }
-}
-
-a:not(.navbar a, .nohigh) {
-    @apply font-semibold text-blue-700
 }
 </style>

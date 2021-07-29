@@ -63,4 +63,8 @@ export default {
     width: 100%;
     @apply bg-blue-100
 }
+
+a:not(.navbar a, .nohigh) {
+    @apply font-semibold text-blue-700
+}
 </style>
