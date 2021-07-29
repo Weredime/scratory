@@ -6,34 +6,19 @@
         <div class="mb-2 shadow-md rounded-md overflow-hidden">
           <div class="header w-full bg-blue-400 p-2">
             <p v-if="current">
-              {{ new Date(current.timeFound).toLocaleString() }} |
-              <span v-if="$route.params.user.toLowerCase() == 'potatophant'"
-                >epic gamer</span
-              >
-              <span v-if="$route.params.user.toLowerCase() == 'jeffalo'"
-                >hekcer</span
-              >
-              <span v-if="$route.params.user.toLowerCase() == 'gosoccerboy5'"
-                >code golfing</span
-              ><span v-if="$route.params.user.toLowerCase() == 'chiroyce'"
-                >the python guy</span
-              >
-              <span v-if="$route.params.user.toLowerCase() == 'kccuber'"
-                >da scratch cat &trade;</span
-              >
-              <span v-if="$route.params.user.toLowerCase() == '9gr'">hmmm</span>
+              {{ new Date(current.timeFound).toLocaleString() }}
+              <span v-if="funi[$route.params.user.toLowerCase()]">
+                | <span class="funny"> {{ funi[$route.params.user.toLowerCase()] }} </span>
+              </span>
             </p>
           </div>
           <div class="grid grid-cols-5">
             <nav class="left-nav p-4 col-span-1">
               <a :href="`https://scratch.mit.edu/users/${user.username}`">
-                <img
-                  :src="
-                    `https://cdn2.scratch.mit.edu/get_image/user/${user.id}_90x90.png`
-                  "
-                />
+                <img :src="`https://cdn2.scratch.mit.edu/get_image/user/${user.id}_90x90.png`" />
                 {{ user.username }}
               </a>
+              <p>{{ forumUser ? forumUser.counts.total.count : "1" }} posts</p>
               <Status v-if="user" :username="user.username" />
             </nav>
             <div class="col-span-4 p-4 border-l border-blue-400 w-full h-60">
@@ -41,26 +26,11 @@
                 <Render :content="current.value" />
               </div>
               <footer class="h-14 text-right">
-                <a
-                  :href="
-                    `https://ocular.jeffalo.net/user/${user.username}?utm_campaign=scratory`
-                  "
-                  >ocular</a
-                >
+                <a :href="`https://ocular.jeffalo.net/user/${user.username}?utm_campaign=scratory`">ocular</a>
                 |
-                <a
-                  :href="
-                    `https://magnifier.potatophant.net/users/${user.username}?utm_campaign=scratory`
-                  "
-                  >magnifier</a
-                >
+                <a :href="`https://magnifier.potatophant.net/users/${user.username}?utm_campaign=scratory`">magnifier</a>
                 |
-                <a
-                  :href="
-                    `https://postpercent.rirurin.com/users/${user.username}?utm_campaign=scratory`
-                  "
-                  >postpercent</a
-                >
+                <a :href="`https://postpercent.rirurin.com/users/${user.username}?utm_campaign=scratory`">postpercent</a>
                 <br />
                 <input
                   type="range"
@@ -89,7 +59,16 @@ export default {
       user: null,
       current: null,
       time: 0,
-      history: null
+      history: null,
+      forumUser: null,
+      funi: {
+        potatophant: "epic gamer",
+        jeffalo: "hekcer",
+        gosoccerboy5: "code golfing",
+        chiroyce: "python enthusiast",
+        kccuber: "da scratch cat &trade;",
+        "9gr": "hmmmm..."
+      }
     };
   },
   async fetch() {
@@ -110,18 +89,20 @@ export default {
     let user = await resp.json();
 
     this.user = user;
+
+    let forumRes = await fetch(`https://scratchdb.lefty.one/v3/forum/user/info/${this.$route.params.user}/`)
+    let forumUser = await forumRes.json()
+
+    this.forumUser = forumUser
   },
   methods: {
     next() {
       this.current = this.history[this.time];
+      this.$router.replace({ path: "#" + this.time })
     }
   },
   fetchOnServer: false
 };
-// |                      |
-//   | <------ 20 ------>  // generated
-// |----------------------|
-//start                 finish
 </script>
 
 <style>

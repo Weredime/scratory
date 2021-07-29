@@ -22,7 +22,7 @@
             class="p-3 border-2 rounded-md shadow-md cursor-pointer border-green-300"
             @click="acceptCookies()"
           >
-            Ok
+            sure
           </button>
         </div>
       </div>
@@ -95,7 +95,7 @@ export default {
   @apply bg-blue-100;
 }
 
-a:not(.navbar a, .nohigh) {
+a:not(.navbar a):not(.nohigh) {
   @apply font-semibold text-blue-700;
 }
 </style>
