@@ -8,7 +8,7 @@
             <p v-if="current">
               {{ new Date(current.timeFound).toLocaleString() }}
               <span v-if="funi[$route.params.user.toLowerCase()]">
-                | <span class="funny"> {{ funi[$route.params.user.toLowerCase()] }} </span>
+                | <span class="funny" v-html="funi[$route.params.user.toLowerCase()]"></span>
               </span>
             </p>
           </div>
