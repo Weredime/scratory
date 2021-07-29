@@ -24,12 +24,20 @@ export default {
       let results = [].slice.apply(
         doc.querySelectorAll("pre.blocks:not(.scratchblockrendered)")
       );
+
       results.forEach(function(el) {
+        // .replace(/(?:<br>|<br\/>|<br \/>)+/, '\n')
+        let html = el.innerHTML
+        let htm = html.replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('<br>', '\n')
+        el.innerHTML = ''
+        el.innerText = htm
         var code = options.read(el, options);
         var parsed = options.parse(code, options);
         var svg = options.render(parsed, options);
         var container = doc.createElement("div");
         container.className = "scratchblocks";
+        container.setAttribute('data-rendered', htm)
+        container.setAttribute('data-original', html)
         container.appendChild(svg);
         el.innerHTML = "";
         el.appendChild(container);
