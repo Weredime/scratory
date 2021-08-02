@@ -57,6 +57,7 @@ export default {
 .content >>> img {
   max-width: 100%;
   max-height: 150px;
+  display: inline-block;
 }
 .content >>> a {
   text-decoration: none;
