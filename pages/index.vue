@@ -46,10 +46,8 @@
               `https://magnifier.potatophant.net/users/${user}?utm_campaign=scratory2&utm_source=scratory`
             "
           >
-            <img
-              src="http://magnifier.potatophant.net/images/icon.png"
-              class="w-10 h-10"
-            />
+            <!-- High-res magnifier logo yay -->
+            <img src="/magnifier-hi-res.png" class="w-10 h-10" />
           </a>
           <a
             class="bg-red-600 hover:bg-red-700 border-0 p-6 text-white rounded-md shadow-md nohigh inline-block"
