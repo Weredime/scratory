@@ -49,7 +49,10 @@
           </p>
           <p>
             <a href="https://scratch.mit.edu/users/potatophant">@potatophant</a>
-            for inspiration
+            for inspiration and help
+          </p>
+          <p>
+            all the ATers, including <a href="https://scratch.mit.edu/users/Chiroyce">@Chiroyce</a>, <a href="https://scratch.mit.edu/users/gosoccerboy5">@gosoccerboy5</a>, and <a href="https://scratch.mit.edu/users/kccuber">@kccuber</a> for being epic and providing feedback in the forum topic (thanks!)
           </p>
         </div>
         <div class="col hidden sm:block">
