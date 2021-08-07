@@ -12,7 +12,7 @@
           type="text"
           max="20"
           v-model="user"
-          class="w-90 border-green-400 border-2 w-1/2 h-10 rounded-md"
+          class="w-90 border-green-400 border-2 w-1/2 h-10 rounded-md pl-3"
         />
         <div class="grid grid-cols-3 w-72 gap-2 mt-3">
           <NuxtLink
