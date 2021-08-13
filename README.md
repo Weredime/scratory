@@ -1,4 +1,4 @@
-# scratory2
+# scratory
 
 ## Build Setup
 
