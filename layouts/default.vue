@@ -95,6 +95,7 @@ export default {
 .footer {
   height: 28vh;
   width: 100%;
+  overflow-y: auto;
   @apply bg-blue-100;
 }
 
