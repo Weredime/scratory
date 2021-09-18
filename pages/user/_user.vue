@@ -67,7 +67,8 @@ export default {
         gosoccerboy5: "code golfing",
         chiroyce: "python enthusiast",
         kccuber: "da scratch cat &trade;",
-        "9gr": "hmmmm..."
+        "9gr": "hmmmm...",
+        GoboSunakku: "amogus &trade;",
       }
     };
   },
