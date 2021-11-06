@@ -68,7 +68,7 @@ export default {
         chiroyce: "python enthusiast",
         kccuber: "da scratch cat &trade;",
         "9gr": "hmmmm...",
-        GoboSunakku: "amogus &trade;",
+        gobosunakku: "amogus &trade;",
       }
     };
   },
