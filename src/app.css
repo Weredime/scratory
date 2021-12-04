@@ -1,0 +1,10 @@
+/* Write your global styles here, in PostCSS syntax */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#svelte {
+	width: 100vw;
+	height: 100vh;
+}

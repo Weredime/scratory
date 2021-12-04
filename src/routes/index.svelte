@@ -1,30 +1,41 @@
-<template>
-  <div>
+<script lang="ts">
+	import Logo from "$lib/Logo.svelte"
+	let user: string = ""
+</script>
+<svelte:head>
+	<title>Scratory | Home</title>
+</svelte:head>
+<div>
     <div class="p-3">
       <center>
-        <Logo v-if="!user" class="w-24" />
-        <img
-          :src="`https://my-ocular.jeffalo.net/api/user/${user}/picture`"
-          class="w-24 h-24"
-          v-if="user"
-        />
+        {#if user}
+			<img
+			src="https://my-ocular.jeffalo.net/api/user/{user}/picture"
+			class="w-24 h-24 mb-3"
+			alt={user}
+		/>
+		{:else}
+		<div class="w-24 h-24">
+			<Logo />
+		</div>
+		{/if}
         <input
           type="text"
           max="20"
-          v-model="user"
+          bind:value={user}
           class="w-90 border-green-400 border-2 w-1/2 h-10 rounded-md pl-3"
         />
         <div class="grid grid-cols-3 w-72 gap-2 mt-3">
-          <NuxtLink
+          <a
             class="bg-blue-400 hover:bg-blue-500 border-0 p-6 text-white rounded-md shadow-md nohigh inline-block"
-            :to="`/user/${user}`"
+            href="/user/{user}"
           >
             <Logo class="w-10 h-10" />
-          </NuxtLink>
+		</a>
           <a
             class="bg-green-500 hover:bg-green-600 border-0 p-6 text-white rounded-md shadow-md nohigh inline-block"
-            :href="
-              `https://ocular.jeffalo.net/user/${user}?utm_campaign=scratory2&utm_source=scratory`
+            href="
+              https://ocular.jeffalo.net/user/{user}?utm_campaign=scratory2&utm_source=scratory
             "
           >
             <svg
@@ -42,8 +53,8 @@
           </a>
           <a
             class="bg-gray-700 hover:bg-gray-800 border-0 p-6 text-white rounded-md shadow-md nohigh inline-block"
-            :href="
-              `https://magnifier.potatophant.net/users/${user}?utm_campaign=scratory2&utm_source=scratory`
+            href="
+              https://magnifier.potatophant.net/users/{user}?utm_campaign=scratory2&utm_source=scratory
             "
           >
             <!-- High-res magnifier logo yay -->
@@ -52,7 +63,7 @@
           </a>
           <a
             class="bg-red-600 hover:bg-red-700 border-0 p-6 text-white rounded-md shadow-md nohigh inline-block"
-            :href="`https://postpercent.rirurin.com/users/${user}`"
+        	href="https://postpercent.rirurin.com/users/{user}"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -80,43 +91,21 @@
           </a>
           <a
             class="bg-blue-400 hover:bg-blue-500 border-0 p-6 text-white rounded-md shadow-md nohigh inline-block"
-            :href="`https://scratchstats.com/${user}`"
+            href="https://scratchstats.com/{user}"
           >
             <img
-              src="http://scratchstats.com/images/icon.png"
+              src="https://static.scratchstats.com/img/icon.456189d.png"
               class="w-10 h-10"
+			  alt="ScratchStats"
             />
           </a>
           <a
             class="bg-blue-400 hover:bg-blue-500 border-0 p-6 text-white rounded-md shadow-md nohigh inline-block"
-            :href="`https://scratch.mit.edu/users/${user}`"
+            href="https://scratch.mit.edu/users/{user}"
           >
-            <img src="/scratch-logo.png" class="w-10 h-10" />
+            <img src="/scratch-logo.png" class="w-10 h-10" alt="scratch logo" />
           </a>
         </div>
       </center>
     </div>
   </div>
-</template>
-
-<script>
-export default {
-  head: {
-    title: "Home"
-  },
-  data() {
-    return {
-      user: ""
-    };
-  }
-};
-</script>
-<style scoped>
-input {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-  background: transparent;
-  color: var(--text);
-  background-color: var(--background);
-}
-</style>
