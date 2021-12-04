@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo from "$lib/Logo.svelte"
+	import Logo from "$lib/Scratory.svelte"
 	let user: string = ""
 </script>
 <svelte:head>
