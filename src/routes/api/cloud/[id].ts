@@ -10,8 +10,8 @@ export const get: RequestHandler = async ({ params }) => {
 
 	try {
 		body = await res.json();
-	} catch(ex) {
-		body = []
+	} catch (ex) {
+		body = [];
 	}
 
 	return {

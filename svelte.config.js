@@ -7,7 +7,11 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		preprocess({
-			postcss: true
+			postcss: true,
+
+			scss: {
+				prependData: '@import "src/variables.scss";'
+			}
 		})
 	],
 
@@ -15,7 +19,17 @@ const config = {
 		adapter: adapter(),
 
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: '#svelte',
+
+		vite: {
+			css: {
+				preprocessorOptions: {
+					scss: {
+						additionalData: '@import "src/variables.scss";'
+					}
+				}
+			}
+		}
 	}
 };
 

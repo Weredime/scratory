@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+
 # create-svelte
+
 =======
+
 # scratory
->>>>>>> 9aae45936a638008382ca1f413ef62fff04c5097
+
+> > > > > > > 9aae45936a638008382ca1f413ef62fff04c5097
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
